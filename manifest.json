@@ -1,0 +1,30 @@
+{
+  "description": "Blocks all comments of twitter users that subscribed to twitter blue.",
+  "manifest_version": 2,
+  "name": "BlueBlocker",
+  "version": "1.0",
+  "homepage_url": "https://36it.de/",
+  "icons": {
+    "48": "icons/256logo.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/256logo.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.twitter.com/*"
+      ],
+      "js": [
+        "blueblocker.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
