@@ -13,7 +13,14 @@
 
 <body>
     <div class="main">
-        <h1>BlueBlocker</h1>
+        <a id="reload" href="#" title="Reload Page">
+            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                    d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48Zm120 182.15a8.62 8.62 0 0 1-8.62 8.62h-59.54a8.61 8.61 0 0 1-6.09-14.71l22.17-22.17l-5.6-6.51a87.38 87.38 0 1 0-62.94 148a87.55 87.55 0 0 0 82.42-58.25A16 16 0 1 1 368 295.8a119.4 119.4 0 1 1-112.62-159.18a118.34 118.34 0 0 1 86.36 36.95l.56.62l4.31 5l14.68-14.68a8.44 8.44 0 0 1 6-2.54a8.61 8.61 0 0 1 8.68 8.63Z" />
+            </svg>
+        </a>
+
+        <h1 id="title">BlueBlocker</h1>
         <div id="options">
             <svg id="blue">
                 <g>
@@ -42,15 +49,16 @@
 
 
         </div>
+
         <div id="modeselect">
             <div class="mydict">
                 <div>
                     <label>
-                        <input type="radio" name="radio" checked="">
+                        <input type="radio" name="radio" checked="" value="comments">
                         <span>Comments</span>
                     </label>
                     <label>
-                        <input type="radio" name="radio" disabled="disabled">
+                        <input type="radio" name="radio" value="posts">
                         <span>Posts</span>
                     </label>
                     <label>
@@ -62,6 +70,12 @@
             </div>
         </div>
 
+        <div class="displayselect">
+            <input class="check" type="checkbox" id="displaymodecheckbox">
+            <span>Show banner for removed tweet</span>
+        </div>
+
+
         <div class="enableblock">
             <div class="toggle-button-cover">
                 <div id="button-3" class="button r">
@@ -72,13 +86,8 @@
             </div>
         </div>
         <span id="stats">I've already blocked <span id="count"></span> tweets for you!</span>
-        <a href="#" id="reload">Reload current page</a>
     </div>
 
 
 </body>
-
-
-
-
 </html>
